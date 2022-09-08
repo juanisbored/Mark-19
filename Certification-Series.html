@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="Images/Arrows Orange Gradient.png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Bootstrap Link-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!--Cookies-->
+    <link href="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js" rel="stylesheet">
+    <!--CSS Stylesheet-->
+    <link href="CSS/style1.css" rel="stylesheet">
+    <!--<link href="https://pdcircle.west-mec.org/libs/ace_311/dist/css/ace.css" rel="stylesheet">-->
+    <!--<link href="Cards.css" rel="stylesheet">-->
+    <title>PD-Circle</title>
+</head>
+<style>
+    .card1 .svg{
+      fill: rgb(18,18,78);
+    }
+
+    .svg:hover{
+      fill: #f7931d;
+    }
+
+    .card1{
+      box-shadow: #f7931d 6px 6px;
+      transition: .2s ease-in-out;
+    }
+
+    .card1:hover{
+      box-shadow: rgb(18,18,78) 6px 6px;
+    }
+
+    .pill-1{
+      border-radius: 27px;
+      border: 3px solid black;
+    }
+
+    .pill-1:hover{
+      border-color: #f7931d;
+      transition: .2s ease-in-out;
+    }
+  </style>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <header class="sticky-sm-top">
+        <div class="d-flex">
+            <!--PD Circle Logo-->
+            <a href="index.html" class="p-2 flex-grow-1 bd-highlight">
+                <img class="mt-3 m-5 img-fluid bg-transparent logo" src="Images/Logo.png" alt="logo">
+                <img class="img-fluid bg-transparent logo1" src="Images/Logo1.png" alt="logo">
+            </a>
+            <!--Navbar Buttons-->
+            <div class="bd-highlight">
+                <nav class="navbar navbar-expand-lg bg-transparentnavbar-light">
+                    <div class="container-fluid">
+                      <a class="navbar-brand" href="#"></a>
+                      <button class="navbar-toggler" style="background-color: #f7931d;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon" padding="5px" ></span>
+                      </button>
+                      <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                          <li class="nav-item">
+                            <a class="nav-link active p-4" href="#">Course Lists</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link active p-4" href="Calendar.html">Course Calender</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link active p-4" href="#">Search Courses</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </nav>
+            </div>
+            <!--Login Button-->
+            <div class="forM bd-highlight">
+                <div class="flex-shrink-1 bd-highlight">
+                    <button class="myDIV mt-4 m-5 img-fluid bg-transparent sticky-sm-top icon" onclick="document.getElementById('Form').style.display='block'">
+                      <!--<img class="img-fluid" src="Images/LoginIcon .png" alt="Icon" style="height: 40px;" >-->
+                      <svg xmlns="http://www.w3.org/2000/svg" style="height: 40px;" fill="white" class=" bi bi-person-fill" viewBox="0 0 16 16">
+                        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                      </svg>
+                    </button>
+                    <span class="hide" id="show"></span>
+                    <div id="Form" class="form">
+                    <form class="form-content animate">  
+                        <div class="container" style="background-color:white">
+                          <label for="email"><b>Email</b></label>
+                          <input id="email" type="email" id="email" placeholder="Enter Email" name="Email" required>
+                    
+                          <label for="psw"><b>Password</b></label>
+                          <input type="password" id="psw"
+                          pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 6 or more characters"  
+                          placeholder="Enter Password" name="Password" required>
+                           
+                          <input class="login" id="submit" type="submit" onclick="showEmail(), document.getElementById('Form').style.display='none'" value="submit">
+                          <!--<button id="submit" type="submit" class="login">Login</button>-->
+                        </div>
+                        <button type="button" onclick="document.getElementById('Form').style.display='none'" class="cancelbtn">Cancel</button>
+                      <button type="button" class="new-account"><a class="n-account" href="New-Account.html">New Account</a></button>
+                          <!--<a href="https://pdcircle.west-mec.org/create-account" class="new-account">New Account</a>-->
+                          <span class="psw">Forgot<a href="#"> password?</a></span>
+                        </div>
+                      </form> 
+                  </div>
+            </div>
+        </div>`
+    </header> 
+<!--Cards-->
+
+
+<!--Foundations Of Online Instruction-->
+<div class="row card1 border m-5 p-2" >
+  <div class="col-12 col-md-8">
+    <h2 class="card-header  fw-bold border-3 bg-white">Foundations Of Online Instruction</h2>
+      <h4 class="card-body" style="color: rgb(18,18,78);;">
+        Zoom sessions from 4-6 PM on April 14, 21, 28 & May 5, 2022 Level 3 No prerequisite This class is designed for all CTE teachers.  This 15 CEU hour class will be taught virtually and will model how the Foundations of Online Instruction should be delivered to students. Part...
+      </h4>
+     
+  </div>
+  <div class="col-6 border border-start-1 border-top-0 border-bottom-0 border-3 border-end-0 col-md-4">
+    <div class="row p-2">
+      <h5 class="p-1 mt-1">
+        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" class="bi svg bi-card-list" viewBox="0 0 16 16">
+          <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
+          <path d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8zm0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zM4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"/>
+        </svg>
+        Category:
+        <a href="#" class="pill-1 fs-6 pt-2 pb-2 ps-3 pe-3" style="text-decoration:none; color: black;" >Certification Series</a>
+      </h5>
+   </div>
+
+   <div class="row p-2">
+    <h5 class="p-1 mt-1">
+      <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" class="bi svg bi-calendar" viewBox="0 0 16 16">
+        <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+      </svg>
+      </svg>
+      When:
+      <a href="#" class="pill-1 fs-6 pt-2 pb-2 ps-3 pe-3" style="text-decoration:none; color: black;" >04/14/2022  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock-fill" viewBox="0 0 16 16">
+        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+      </svg>  4:00 PM − 6:00 PM
+    </a>
+    </h5>
+ </div>
+ <div class="row p-2">
+  <h5 class="p-1 mt-1">
+    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" class="bi svg bi-geo-alt" viewBox="0 0 16 16">
+      <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+      <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+    </svg>
+    Where:
+    <a href="#" class="pill-1 fs-6 pt-2 pb-2 ps-3 pe-3" style="text-decoration:none; color: black;" >
+        Online Class
+  </a>
+  </h5>
+</div>
+   </div>
+  <div class="card-footer">
+    <a href="Foundations of Online Instruction.html" class="m-2 float-end btn btn-primary">
+      Class Details
+    </a>
+  </div>
+</div>
+<!---->
+
+<!--Work-based Learning-->
+<div class="row card1 border m-5 p-2" >
+    <div class="col-12 col-md-8">
+      <h2 class="card-header  fw-bold border-3 bg-white">Work-based Learning</h2>
+        <h4 class="card-body" style="color: rgb(18,18,78);;">
+            Level 3 No prerequisite This class is designed for all CTE teachers.  This course satisfies the ADE requirement for the Cooperative Education Endorsement. Create meaningful work-based learning experiences for your students.  This course will provide teachers with a varie...
+        </h4>
+       
+    </div>
+    <div class="col-6 border border-start-1 border-top-0 border-bottom-0 border-3 border-end-0 col-md-4">
+      <div class="row p-2">
+        <h5 class="p-1 mt-1">
+          <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" class="bi svg bi-card-list" viewBox="0 0 16 16">
+            <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
+            <path d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8zm0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zM4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"/>
+          </svg>
+          Category:
+          <a href="#" class="pill-1 fs-6 pt-2 pb-2 ps-3 pe-3" style="text-decoration:none; color: black;" >Certification Series</a>
+        </h5>
+     </div>
+  
+     <div class="row p-2">
+      <h5 class="p-1 mt-1">
+        <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" class="bi svg bi-calendar" viewBox="0 0 16 16">
+          <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+        </svg>
+        </svg>
+        When:
+        <a href="#" class="pill-1 fs-6 pt-2 pb-2 ps-3 pe-3" style="text-decoration:none; color: black;" >04/26/2022 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock-fill" viewBox="0 0 16 16">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+        </svg>   8:00 AM − 4:00 PM
+      </a>
+      </h5>
+   </div>
+   <div class="row p-2">
+    <h5 class="p-1 mt-1">
+      <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" class="bi svg bi-geo-alt" viewBox="0 0 16 16">
+        <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+        <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+      </svg>
+      Where:
+      <a href="#" class="pill-1 fs-6 pt-2 pb-2 ps-3 pe-3" style="text-decoration:none; color: black;" >
+        START @ West-MEC - Glendale, AZ
+    </a>
+    </h5>
+  </div>
+     </div>
+    <div class="card-footer">
+      <a href="Work-based Learning.html" class="m-2 float-end btn btn-primary">
+        Class Details
+      </a>
+    </div>
+  </div>
+<!---->
+<!--Using Advisory Councils Effectively-->
+
+<div class="row card1 border m-5 p-2" >
+    <div class="col-12 col-md-8">
+      <h2 class="card-header  fw-bold border-3 bg-white">Using Advisory Councils Effectively</h2>
+        <h4 class="card-body" style="color: rgb(18,18,78);;">
+            Level 3 No prerequisite This class is designed for all CTE teachers.  An energetic and involved advisory council can have a significant impact in helping your program and students achieve their goals! This interactive course is designed to ensure success in the formation and use...
+        </h4>
+       
+    </div>
+    <div class="col-6 border border-start-1 border-top-0 border-bottom-0 border-3 border-end-0 col-md-4">
+      <div class="row p-2">
+        <h5 class="p-1 mt-1">
+          <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" class="bi svg bi-card-list" viewBox="0 0 16 16">
+            <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
+            <path d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8zm0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zM4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"/>
+          </svg>
+          Category:
+          <a href="#" class="pill-1 fs-6 pt-2 pb-2 ps-3 pe-3" style="text-decoration:none; color: black;" >Certification Series</a>
+        </h5>
+     </div>
+  
+     <div class="row p-2">
+      <h5 class="p-1 mt-1">
+        <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" class="bi svg bi-calendar" viewBox="0 0 16 16">
+          <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+        </svg>
+        </svg>
+        When:
+        <a href="#" class="pill-1 fs-6 pt-2 pb-2 ps-3 pe-3" style="text-decoration:none; color: black;" >04/28/2022 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock-fill" viewBox="0 0 16 16">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+        </svg>   8:00 AM − 4:00 PM
+      </a>
+      </h5>
+   </div>
+   <div class="row p-2">
+    <h5 class="p-1 mt-1">
+      <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" class="bi svg bi-geo-alt" viewBox="0 0 16 16">
+        <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+        <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+      </svg>
+      Where:
+      <a href="#" class="pill-1 fs-6 pt-2 pb-2 ps-3 pe-3" style="text-decoration:none; color: black;" >
+        START @ West-MEC - Glendale, AZ
+    </a>
+    </h5>
+  </div>
+     </div>
+    <div class="card-footer">
+      <a href="Using Advisory Councils Effectively.html" class="m-2 float-end btn btn-primary">
+        Class Details
+      </a>
+    </div>
+  </div>
+<!--Rubrics To Increase Student Success-->
+
+<div class="row card1 border m-5 p-2" >
+    <div class="col-12 col-md-8">
+      <h2 class="card-header  fw-bold border-3 bg-white">Rubrics To Increase Student Success</h2>
+        <h4 class="card-body" style="color: rgb(18,18,78);;">
+            Level 3 No prerequisite This class is designed for all CTE teachers.  CTE courses are performance-based. When teachers let students know exactly how their work will be evaluated, the students' level of performance always improves. Come and participate in a hands-on activity that...
+        </h4>
+       
+    </div>
+    <div class="col-6 border border-start-1 border-top-0 border-bottom-0 border-3 border-end-0 col-md-4">
+      <div class="row p-2">
+        <h5 class="p-1 mt-1">
+          <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" class="bi svg bi-card-list" viewBox="0 0 16 16">
+            <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
+            <path d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8zm0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zM4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"/>
+          </svg>
+          Category:
+          <a href="#" class="pill-1 fs-6 pt-2 pb-2 ps-3 pe-3" style="text-decoration:none; color: black;" >Certification Series</a>
+        </h5>
+     </div>
+  
+     <div class="row p-2">
+      <h5 class="p-1 mt-1">
+        <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" class="bi svg bi-calendar" viewBox="0 0 16 16">
+          <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+        </svg>
+        </svg>
+        When:
+        <a href="#" class="pill-1 fs-6 pt-2 pb-2 ps-3 pe-3" style="text-decoration:none; color: black;" >05/31/2022 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock-fill" viewBox="0 0 16 16">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+        </svg>   8:00 AM − 4:00 PM
+      </a>
+      </h5>
+   </div>
+   <div class="row p-2">
+    <h5 class="p-1 mt-1">
+      <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" class="bi svg bi-geo-alt" viewBox="0 0 16 16">
+        <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+        <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+      </svg>
+      Where:
+      <a href="#" class="pill-1 fs-6 pt-2 pb-2 ps-3 pe-3" style="text-decoration:none; color: black;" >
+        START @ West-MEC - Glendale, AZ
+    </a>
+    </h5>
+  </div>
+     </div>
+    <div class="card-footer">
+      <a href="Rubrics to Increase Student Success.html" class="m-2 float-end btn btn-primary">
+        Class Details
+      </a>
+    </div>
+  </div>
+<!--Laboratory Safety & Management-->
+
+<div class="row card1 border m-5 p-2" >
+    <div class="col-12 col-md-8">
+      <h2 class="card-header  fw-bold border-3 bg-white">Laboratory Safety & Management</h2>
+        <h4 class="card-body" style="color: rgb(18,18,78);;">
+            Level 1 No prerequisite This class is designed for all CTE teachers. Please bring your laptop or tablet to this class. This class is designed to help participants develop a laboratory improvement plan including management, clean-up procedures, safety procedures, and meeting monito...
+        </h4>
+       
+    </div>
+    <div class="col-6 border border-start-1 border-top-0 border-bottom-0 border-3 border-end-0 col-md-4">
+      <div class="row p-2">
+        <h5 class="p-1 mt-1">
+          <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" class="bi svg bi-card-list" viewBox="0 0 16 16">
+            <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
+            <path d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8zm0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zM4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"/>
+          </svg>
+          Category:
+          <a href="#" class="pill-1 fs-6 pt-2 pb-2 ps-3 pe-3" style="text-decoration:none; color: black;" >Certification Series</a>
+        </h5>
+     </div>
+  
+     <div class="row p-2">
+      <h5 class="p-1 mt-1">
+        <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" class="bi svg bi-calendar" viewBox="0 0 16 16">
+          <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+        </svg>
+        </svg>
+        When:
+        <a href="#" class="pill-1 fs-6 pt-2 pb-2 ps-3 pe-3" style="text-decoration:none; color: black;" >06/1/2022 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock-fill" viewBox="0 0 16 16">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+        </svg>   8:00 AM − 4:00 PM
+      </a>
+      </h5>
+   </div>
+   <div class="row p-2">
+    <h5 class="p-1 mt-1">
+      <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" class="bi svg bi-geo-alt" viewBox="0 0 16 16">
+        <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+        <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+      </svg>
+      Where:
+      <a href="#" class="pill-1 fs-6 pt-2 pb-2 ps-3 pe-3" style="text-decoration:none; color: black;" >
+        START @ West-MEC - Glendale, AZ
+    </a>
+    </h5>
+  </div>
+     </div>
+    <div class="card-footer">
+      <a href="Laboratory Safety & Management.html" class="m-2 float-end btn btn-primary">
+        Class Details
+      </a>
+    </div>
+  </div>
+<!--Effective Demonstrations-->
+<div class="row card1 border m-5 p-2" >
+    <div class="col-12 col-md-8">
+      <h2 class="card-header  fw-bold border-3 bg-white">Effective Demonstrations</h2>
+        <h4 class="card-body" style="color: rgb(18,18,78);;">
+            Level 2 No prerequisite This class is designed for all CTE teachers.  Please bring your laptop to this class.  (tablet or phone could work) Whether in a welding lab or a bioscience lab, effective demonstrations are crucial. In this course, teachers will engage in the fou...
+        </h4>
+       
+    </div>
+    <div class="col-6 border border-start-1 border-top-0 border-bottom-0 border-3 border-end-0 col-md-4">
+      <div class="row p-2">
+        <h5 class="p-1 mt-1">
+          <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" class="bi svg bi-card-list" viewBox="0 0 16 16">
+            <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
+            <path d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8zm0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zM4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"/>
+          </svg>
+          Category:
+          <a href="#" class="pill-1 fs-6 pt-2 pb-2 ps-3 pe-3" style="text-decoration:none; color: black;" >Certification Series</a>
+        </h5>
+     </div>
+  
+     <div class="row p-2">
+      <h5 class="p-1 mt-1">
+        <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" class="bi svg bi-calendar" viewBox="0 0 16 16">
+          <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+        </svg>
+        </svg>
+        When:
+        <a href="#" class="pill-1 fs-6 pt-2 pb-2 ps-3 pe-3" style="text-decoration:none; color: black;" >: 06/2/2022  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock-fill" viewBox="0 0 16 16">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+        </svg>   8:00 AM − 4:00 PM
+      </a>
+      </h5>
+   </div>
+   <div class="row p-2">
+    <h5 class="p-1 mt-1">
+      <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" class="bi svg bi-geo-alt" viewBox="0 0 16 16">
+        <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+        <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+      </svg>
+      Where:
+      <a href="#" class="pill-1 fs-6 pt-2 pb-2 ps-3 pe-3" style="text-decoration:none; color: black;" >
+        START @ West-MEC - Glendale, AZ
+    </a>
+    </h5>
+  </div>
+     </div>
+    <div class="card-footer">
+      <a href="Effective-Demonstrations.html" class="m-2 float-end btn btn-primary">
+        Class Details
+      </a>
+    </div>
+  </div>
+<!--CTE Essentials-->
+<div class="row card1 border m-5 p-2" >
+    <div class="col-12 col-md-8">
+      <h2 class="card-header  fw-bold border-3 bg-white">CTE Essentials</h2>
+        <h4 class="card-body" style="color: rgb(18,18,78);;">
+            Level 1 CTE Class No prerequisite This class is designed for all CTE employees.  The CTE Delivery Model is THE premier educational system for all students.   CTE essentials will give you an overview of each of the four components of this outstanding model, and allow...
+        </h4>
+       
+    </div>
+    <div class="col-6 border border-start-1 border-top-0 border-bottom-0 border-3 border-end-0 col-md-4">
+      <div class="row p-2">
+        <h5 class="p-1 mt-1">
+          <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" class="bi svg bi-card-list" viewBox="0 0 16 16">
+            <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
+            <path d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8zm0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zM4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"/>
+          </svg>
+          Category:
+          <a href="#" class="pill-1 fs-6 pt-2 pb-2 ps-3 pe-3" style="text-decoration:none; color: black;" >Certification Series</a>
+        </h5>
+     </div>
+  
+     <div class="row p-2">
+      <h5 class="p-1 mt-1">
+        <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" class="bi svg bi-calendar" viewBox="0 0 16 16">
+          <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+        </svg>
+        </svg>
+        When:
+        <a href="#" class="pill-1 fs-6 pt-2 pb-2 ps-3 pe-3" style="text-decoration:none; color: black;" >:06/14/2022   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock-fill" viewBox="0 0 16 16">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+        </svg>   8:00 AM − 4:00 PM
+      </a>
+      </h5>
+   </div>
+   <div class="row p-2">
+    <h5 class="p-1 mt-1">
+      <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" class="bi svg bi-geo-alt" viewBox="0 0 16 16">
+        <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+        <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+      </svg>
+      Where:
+      <a href="#" class="pill-1 fs-6 pt-2 pb-2 ps-3 pe-3" style="text-decoration:none; color: black;" >
+        START @ West-MEC - Glendale, AZ
+    </a>
+    </h5>
+  </div>
+     </div>
+    <div class="card-footer">
+      <a href="CTE-Essentials.html" class="m-2 float-end btn btn-primary">
+        Class Details
+      </a>
+    </div>
+  </div>
+<!--Technical Reading-->
+
+<div class="row card1 border m-5 p-2" >
+    <div class="col-12 col-md-8">
+      <h2 class="card-header  fw-bold border-3 bg-white">Technical Reading</h2>
+        <h4 class="card-body" style="color: rgb(18,18,78);;">
+            Level 4 No prerequisite This class is designed for advanced CTE teachers. Your CTE classroom truly is the key to the meaningful application of the current career and college readiness standards.   This course will give you specific examples where Arizona’s Common Core...
+        </h4>
+       
+    </div>
+    <div class="col-6 border border-start-1 border-top-0 border-bottom-0 border-3 border-end-0 col-md-4">
+      <div class="row p-2">
+        <h5 class="p-1 mt-1">
+          <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" class="bi svg bi-card-list" viewBox="0 0 16 16">
+            <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
+            <path d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8zm0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zM4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"/>
+          </svg>
+          Category:
+          <a href="#" class="pill-1 fs-6 pt-2 pb-2 ps-3 pe-3" style="text-decoration:none; color: black;" >Certification Series</a>
+        </h5>
+     </div>
+  
+     <div class="row p-2">
+      <h5 class="p-1 mt-1">
+        <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" class="bi svg bi-calendar" viewBox="0 0 16 16">
+          <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+        </svg>
+        </svg>
+        When:
+        <a href="#" class="pill-1 fs-6 pt-2 pb-2 ps-3 pe-3" style="text-decoration:none; color: black;" >:06/14/2022   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock-fill" viewBox="0 0 16 16">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+        </svg>   8:00 AM − 4:00 PM
+      </a>
+      </h5>
+   </div>
+   <div class="row p-2">
+    <h5 class="p-1 mt-1">
+      <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" class="bi svg bi-geo-alt" viewBox="0 0 16 16">
+        <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+        <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+      </svg>
+      Where:
+      <a href="#" class="pill-1 fs-6 pt-2 pb-2 ps-3 pe-3" style="text-decoration:none; color: black;" >
+        START @ West-MEC - Glendale, AZ
+    </a>
+    </h5>
+  </div>
+     </div>
+    <div class="card-footer">
+      <a href="Technical Reading.html" class="m-2 float-end btn btn-primary">
+        Class Details
+      </a>
+    </div>
+  </div>
+<!--Grading And Assessments-->
+
+
+<div class="row card1 border m-5 p-2" >
+    <div class="col-12 col-md-8">
+      <h2 class="card-header  fw-bold border-3 bg-white">Grading And Assessments</h2>
+        <h4 class="card-body" style="color: rgb(18,18,78);;">
+            Level 2 No prerequisite This class is designed for all CTE teachers.  How should students in CTE be assessed? How do we set up a fair grading system for both teachers and students?  Learn about the wide variety of options that address both of these issues to help you develo...
+        </h4>
+       
+    </div>
+    <div class="col-6 border border-start-1 border-top-0 border-bottom-0 border-3 border-end-0 col-md-4">
+      <div class="row p-2">
+        <h5 class="p-1 mt-1">
+          <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" class="bi svg bi-card-list" viewBox="0 0 16 16">
+            <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
+            <path d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8zm0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zM4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"/>
+          </svg>
+          Category:
+          <a href="#" class="pill-1 fs-6 pt-2 pb-2 ps-3 pe-3" style="text-decoration:none; color: black;" >Certification Series</a>
+        </h5>
+     </div>
+  
+     <div class="row p-2">
+      <h5 class="p-1 mt-1">
+        <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" class="bi svg bi-calendar" viewBox="0 0 16 16">
+          <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+        </svg>
+        </svg>
+        When:
+        <a href="#" class="pill-1 fs-6 pt-2 pb-2 ps-3 pe-3" style="text-decoration:none; color: black;" >:06/14/2022   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock-fill" viewBox="0 0 16 16">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+        </svg>   8:00 AM − 4:00 PM
+      </a>
+      </h5>
+   </div>
+   <div class="row p-2">
+    <h5 class="p-1 mt-1">
+      <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" class="bi svg bi-geo-alt" viewBox="0 0 16 16">
+        <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+        <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+      </svg>
+      Where:
+      <a href="#" class="pill-1 fs-6 pt-2 pb-2 ps-3 pe-3" style="text-decoration:none; color: black;" >
+        START @ West-MEC - Glendale, AZ
+    </a>
+    </h5>
+  </div>
+     </div>
+    <div class="card-footer">
+      <a href="Grading-And-Assessments.html" class="m-2 float-end btn btn-primary">
+        Class Details
+      </a>
+    </div>
+  </div>
+<!--Instructional Best Practices (2 Day Class) 1st Day Registration-->
+
+<div class="row card1 border m-5 p-2" >
+    <div class="col-12 col-md-8">
+      <h2 class="card-header  fw-bold border-3 bg-white">Instructional Best Practices (2 Day Class) 1st Day Registration</h2>
+        <h4 class="card-body" style="color: rgb(18,18,78);;">
+            Level 1 No prerequisite This class is designed for all CTE teachers. This 2-day course is an introduction to the design and use of CTE curriculum.  You will outline the 6 parts to a CTED lesson, focusing on the design and delivery of relevant and engaging lessons. Special emphas...
+        </h4>
+       
+    </div>
+    <div class="col-6 border border-start-1 border-top-0 border-bottom-0 border-3 border-end-0 col-md-4">
+      <div class="row p-2">
+        <h5 class="p-1 mt-1">
+          <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" class="bi svg bi-card-list" viewBox="0 0 16 16">
+            <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
+            <path d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8zm0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zM4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"/>
+          </svg>
+          Category:
+          <a href="#" class="pill-1 fs-6 pt-2 pb-2 ps-3 pe-3" style="text-decoration:none; color: black;" >Certification Series</a>
+        </h5>
+     </div>
+  
+     <div class="row p-2">
+      <h5 class="p-1 mt-1">
+        <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" class="bi svg bi-calendar" viewBox="0 0 16 16">
+          <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+        </svg>
+        </svg>
+        When:
+        <a href="#" class="pill-1 fs-6 pt-2 pb-2 ps-3 pe-3" style="text-decoration:none; color: black;" >:06/16/2022   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock-fill" viewBox="0 0 16 16">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+        </svg>   8:00 AM − 4:00 PM
+      </a>
+      </h5>
+   </div>
+   <div class="row p-2">
+    <h5 class="p-1 mt-1">
+      <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" class="bi svg bi-geo-alt" viewBox="0 0 16 16">
+        <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+        <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+      </svg>
+      Where:
+      <a href="#" class="pill-1 fs-6 pt-2 pb-2 ps-3 pe-3" style="text-decoration:none; color: black;" >
+        START @ West-MEC - Glendale, AZ
+    </a>
+    </h5>
+  </div>
+     </div>
+    <div class="card-footer">
+      <a href="Instructional Best Practices (2 Day Class) 1st Day Registration.html" class="m-2 float-end btn btn-primary">
+        Class Details
+      </a>
+    </div>
+  </div>
+<!--Empowering Students Through Professional Skills-->
+
+
+<div class="row card1 border m-5 p-2" >
+    <div class="col-12 col-md-8">
+      <h2 class="card-header  fw-bold border-3 bg-white">Empowering Students Through Professional Skills</h2>
+        <h4 class="card-body" style="color: rgb(18,18,78);;">
+            Level 3 No prerequisite This class is designed for all CTE teachers. This course will explore the nine Professional Skills identified by the Arizona Department of Education in collaboration with industry.  Participants will identify them, use created rubrics to assess their use,...
+        </h4>
+       
+    </div>
+    <div class="col-6 border border-start-1 border-top-0 border-bottom-0 border-3 border-end-0 col-md-4">
+      <div class="row p-2">
+        <h5 class="p-1 mt-1">
+          <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" class="bi svg bi-card-list" viewBox="0 0 16 16">
+            <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
+            <path d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8zm0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zM4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"/>
+          </svg>
+          Category:
+          <a href="#" class="pill-1 fs-6 pt-2 pb-2 ps-3 pe-3" style="text-decoration:none; color: black;" >Certification Series</a>
+        </h5>
+     </div>
+  
+     <div class="row p-2">
+      <h5 class="p-1 mt-1">
+        <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" class="bi svg bi-calendar" viewBox="0 0 16 16">
+          <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+        </svg>
+        </svg>
+        When:
+        <a href="#" class="pill-1 fs-6 pt-2 pb-2 ps-3 pe-3" style="text-decoration:none; color: black;" >:06/16/2022   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock-fill" viewBox="0 0 16 16">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+        </svg>   8:00 AM − 4:00 PM
+      </a>
+      </h5>
+   </div>
+   <div class="row p-2">
+    <h5 class="p-1 mt-1">
+      <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" class="bi svg bi-geo-alt" viewBox="0 0 16 16">
+        <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+        <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+      </svg>
+      Where:
+      <a href="#" class="pill-1 fs-6 pt-2 pb-2 ps-3 pe-3" style="text-decoration:none; color: black;" >
+        START @ West-MEC - Glendale, AZ
+    </a>
+    </h5>
+  </div>
+     </div>
+    <div class="card-footer">
+      <a href="Empowering-Students Through-Professional-Skills.html" class="m-2 float-end btn btn-primary">
+        Class Details
+      </a>
+    </div>
+  </div>
+<!--Instructional Best Practices (2 Day Class) 2nd Day Registration-->
+
+<div class="row card1 border m-5 p-2" >
+    <div class="col-12 col-md-8">
+      <h2 class="card-header  fw-bold border-3 bg-white">Instructional Best Practices (2 Day Class) 2nd Day Registration</h2>
+        <h4 class="card-body" style="color: rgb(18,18,78);;">
+            Level 1 Prerequisite: Instructional Best Practices Day 1 This class is designed for all CTE teachers.  This 2-day course is an introduction to the design and use of CTE curriculum.  You will outline the 6 parts to a CTED lesson, focusing on the design and delivery of releva...
+        </h4>
+       
+    </div>
+    <div class="col-6 border border-start-1 border-top-0 border-bottom-0 border-3 border-end-0 col-md-4">
+      <div class="row p-2">
+        <h5 class="p-1 mt-1">
+          <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" class="bi svg bi-card-list" viewBox="0 0 16 16">
+            <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
+            <path d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8zm0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zM4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"/>
+          </svg>
+          Category:
+          <a href="#" class="pill-1 fs-6 pt-2 pb-2 ps-3 pe-3" style="text-decoration:none; color: black;" >Certification Series</a>
+        </h5>
+     </div>
+  
+     <div class="row p-2">
+      <h5 class="p-1 mt-1">
+        <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" class="bi svg bi-calendar" viewBox="0 0 16 16">
+          <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+        </svg>
+        </svg>
+        When:
+        <a href="#" class="pill-1 fs-6 pt-2 pb-2 ps-3 pe-3" style="text-decoration:none; color: black;" >:06/21/2022   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock-fill" viewBox="0 0 16 16">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+        </svg>   8:00 AM − 4:00 PM
+      </a>
+      </h5>
+   </div>
+   <div class="row p-2">
+    <h5 class="p-1 mt-1">
+      <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" class="bi svg bi-geo-alt" viewBox="0 0 16 16">
+        <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+        <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+      </svg>
+      Where:
+      <a href="#" class="pill-1 fs-6 pt-2 pb-2 ps-3 pe-3" style="text-decoration:none; color: black;" >
+        START @ West-MEC - Glendale, AZ
+    </a>
+    </h5>
+  </div>
+     </div>
+    <div class="card-footer">
+      <a href="Instructional Best Practices (2 Day Class) 2nd Day Registration.html" class="m-2 float-end btn btn-primary">
+        Class Details
+      </a>
+    </div>
+  </div>
+<!--Performance Literacy-->
+
+<div class="row card1 border m-5 p-2" >
+    <div class="col-12 col-md-8">
+      <h2 class="card-header  fw-bold border-3 bg-white">Performance Literacy</h2>
+        <h4 class="card-body" style="color: rgb(18,18,78);;">
+            Level 4 Prerequisite:  Completion of Technical Reading This class is designed for advanced CTE teachers. Performance Literacy is the partner class for Technical Reading.  You will earn 1 ADE credit by attending both Technical Reading on June 14, 2021 and this class, Perform...
+        </h4>
+       
+    </div>
+    <div class="col-6 border border-start-1 border-top-0 border-bottom-0 border-3 border-end-0 col-md-4">
+      <div class="row p-2">
+        <h5 class="p-1 mt-1">
+          <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" class="bi svg bi-card-list" viewBox="0 0 16 16">
+            <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
+            <path d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8zm0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zM4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"/>
+          </svg>
+          Category:
+          <a href="#" class="pill-1 fs-6 pt-2 pb-2 ps-3 pe-3" style="text-decoration:none; color: black;" >Certification Series</a>
+        </h5>
+     </div>
+  
+     <div class="row p-2">
+      <h5 class="p-1 mt-1">
+        <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" class="bi svg bi-calendar" viewBox="0 0 16 16">
+          <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+        </svg>
+        </svg>
+        When:
+        <a href="#" class="pill-1 fs-6 pt-2 pb-2 ps-3 pe-3" style="text-decoration:none; color: black;" >:06/21/2022   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock-fill" viewBox="0 0 16 16">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+        </svg>   8:00 AM − 4:00 PM
+      </a>
+      </h5>
+   </div>
+   <div class="row p-2">
+    <h5 class="p-1 mt-1">
+      <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" class="bi svg bi-geo-alt" viewBox="0 0 16 16">
+        <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+        <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+      </svg>
+      Where:
+      <a href="#" class="pill-1 fs-6 pt-2 pb-2 ps-3 pe-3" style="text-decoration:none; color: black;" >
+        START @ West-MEC - Glendale, AZ
+    </a>
+    </h5>
+  </div>
+     </div>
+    <div class="card-footer">
+      <a href="Performance Literacy.html" class="m-2 float-end btn btn-primary">
+        Class Details
+      </a>
+    </div>
+  </div>
+<!--Classroom Management-->
+
+
+<div class="row card1 border m-5 p-2" >
+    <div class="col-12 col-md-8">
+      <h2 class="card-header  fw-bold border-3 bg-white">Classroom Management</h2>
+        <h4 class="card-body" style="color: rgb(18,18,78);;">
+            Level 1 No prerequisite This class is designed for all CTE teachers.  In this course, teachers will enhance classroom management skills by developing rules, procedures, and routines that are aligned to their content and environment. We will consider the philosophy of “Disc...
+        </h4>
+       
+    </div>
+    <div class="col-6 border border-start-1 border-top-0 border-bottom-0 border-3 border-end-0 col-md-4">
+      <div class="row p-2">
+        <h5 class="p-1 mt-1">
+          <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" class="bi svg bi-card-list" viewBox="0 0 16 16">
+            <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
+            <path d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8zm0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zM4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"/>
+          </svg>
+          Category:
+          <a href="#" class="pill-1 fs-6 pt-2 pb-2 ps-3 pe-3" style="text-decoration:none; color: black;" >Certification Series</a>
+        </h5>
+     </div>
+  
+     <div class="row p-2">
+      <h5 class="p-1 mt-1">
+        <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" class="bi svg bi-calendar" viewBox="0 0 16 16">
+          <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+        </svg>
+        </svg>
+        When:
+        <a href="#" class="pill-1 fs-6 pt-2 pb-2 ps-3 pe-3" style="text-decoration:none; color: black;" >:06/23/2022   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock-fill" viewBox="0 0 16 16">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+        </svg>   8:00 AM − 4:00 PM
+      </a>
+      </h5>
+   </div>
+   <div class="row p-2">
+    <h5 class="p-1 mt-1">
+      <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" class="bi svg bi-geo-alt" viewBox="0 0 16 16">
+        <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+        <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+      </svg>
+      Where:
+      <a href="#" class="pill-1 fs-6 pt-2 pb-2 ps-3 pe-3" style="text-decoration:none; color: black;" >
+        START @ West-MEC - Glendale, AZ
+    </a>
+    </h5>
+  </div>
+     </div>
+    <div class="card-footer">
+      <a href="Classroom-Management.html" class="m-2 float-end btn btn-primary">
+        Class Details
+      </a>
+    </div>
+  </div>
+<!--Serving Exceptional Students In CTE-->
+
+
+<div class="row card1 border m-5 p-2" >
+    <div class="col-12 col-md-8">
+      <h2 class="card-header  fw-bold border-3 bg-white">Serving Exceptional Students In CTE</h2>
+        <h4 class="card-body" style="color: rgb(18,18,78);;">
+            Level 3 No prerequisite This class is designed for all CTE educators.  This course is designed to provide CTE educators and other interested parties with a broad understanding of special education. During the course of this interactive workshop we will cover a range of topics in...
+        </h4>
+       
+    </div>
+    <div class="col-6 border border-start-1 border-top-0 border-bottom-0 border-3 border-end-0 col-md-4">
+      <div class="row p-2">
+        <h5 class="p-1 mt-1">
+          <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" class="bi svg bi-card-list" viewBox="0 0 16 16">
+            <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
+            <path d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8zm0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zM4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"/>
+          </svg>
+          Category:
+          <a href="#" class="pill-1 fs-6 pt-2 pb-2 ps-3 pe-3" style="text-decoration:none; color: black;" >Certification Series</a>
+        </h5>
+     </div>
+  
+     <div class="row p-2">
+      <h5 class="p-1 mt-1">
+        <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" class="bi svg bi-calendar" viewBox="0 0 16 16">
+          <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+        </svg>
+        </svg>
+        When:
+        <a href="#" class="pill-1 fs-6 pt-2 pb-2 ps-3 pe-3" style="text-decoration:none; color: black;" >:06/23/2022   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock-fill" viewBox="0 0 16 16">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+        </svg>   8:00 AM − 4:00 PM
+      </a>
+      </h5>
+   </div>
+   <div class="row p-2">
+    <h5 class="p-1 mt-1">
+      <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" class="bi svg bi-geo-alt" viewBox="0 0 16 16">
+        <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+        <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+      </svg>
+      Where:
+      <a href="#" class="pill-1 fs-6 pt-2 pb-2 ps-3 pe-3" style="text-decoration:none; color: black;" >
+        West-MEC - District Office
+    </a>
+    </h5>
+  </div>
+     </div>
+    <div class="card-footer">
+      <a href="Serving Exceptional Students In CTE.html" class="m-2 float-end btn btn-primary">
+        Class Details
+      </a>
+    </div>
+  </div>
+
+<!---->
+
+<br>
+    <!--Footer-->
+    <footer class="pt-1 text-white text-left position-relative">
+      <div class="container">
+          <div class="row">
+              <div class="col">
+                  <p class="lead">Contact</p>
+                  <p class="lead">-</p>
+                  <p class="lead">Western Maricopa Education Center #402</p>
+                  <p class="lead">Professional Development Department</p>
+                  <p class="lead">5405 North 99th Avenue</p>
+                  <p class="lead">Glendale, AZ 85305</p>
+                  <p class="lead"><a class="number text-decoration-none" href="tel:(623) 738.0023">623-738-0023</a></p>
+                  <p class="lead">pd@west-mec.org</p>
+              </div>
+              <div class="col">
+                  <p class="lead">ㅤ</p>
+                  <p class="lead">ㅤ</p>
+                  <p class="lead">Director of Professional Development and Strategic Planning</p>
+                  <p class="lead">-</p>
+                  <p class="lead">-</p>
+                  <p class="lead">Joel Wakefield</p>
+                  <p class="lead"><a class="number text-decoration-none" href="tel:(623) 738.0010">623-738-0010</a></p>
+                  <p class="lead">joel.wakefield@west-mec.org</p>
+              </div>
+          </div>
+      </div>
+      <!--<p class="lead mb-1 Cright text-center">Copyright &copy; 2021 All Rights Reserved</p>-->
+      <p class="lead mb-1 Cright text-center"> Copyright &copy; <script>document.write(new Date().getFullYear())</script> All Rights Reserved</p>
+      <br>
+  </footer>
+</body>
+
+ <!--JavaScript-->
+ <script>
+  /*JavaScript for Login Form
+  ___________________________*/
+  var form = document.getElementById('Form');
+/*Click anywhere outside and Form will Close
+____________________________________________*/
+  window.onclick = function(event) {
+    if (event.target == form) {
+      form.style.display = "none";
+    }
+  }
+
+  function email(email)
+  {
+    var letters = /^[A-Za-z0-9.]+@[A-Za-z]{3}$/;
+    if(email.value.legth==0)
+    {
+      alert('Please enter your email');
+      email.focus();
+      return false;
+    }
+    else if(email.value.match(letters))
+    {
+      return true;
+    }
+    else
+    {
+      alert('Email must contain @');
+      email.focus();
+      return false;
+    }
+  }
+
+</script>
+
+<div class="results"></div>
+
+<script>
+  // ID of the Google Spreadsheet
+  var spreadsheetID = 'SPREADSHEET KEY';
+
+  // Make sure it is public or set to Anyone with link can view
+  var url = 'https://spreadsheets.google.com/feeds/list/' + spreadsheetID + '/od6/public/values?alt=json';
+
+  $.getJSON(url, function (data) {
+    var entry = data.feed.entry;
+
+    $(entry).each(function () {
+      // Column names are name, age, etc.
+      $('.results').prepend('<h2>' + this.gsx$name.$t + '</h2><p>' + this.gsx$age.$t + '</p>');
+    });
+  });
+</script>
+</html>
